@@ -1,2 +1,3 @@
 trio
+pytest-cov
 pytest-trio

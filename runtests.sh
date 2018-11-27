@@ -15,4 +15,5 @@ mkdir empty
 cd empty
 
 pip install ../unasynctest*.whl
-pytest ../tests
+INSTALLDIR=$(python -c "import os, unasynctest; print(os.path.dirname(unasynctest.__file__))")
+pytest --cov="$INSTALLDIR" ../tests
